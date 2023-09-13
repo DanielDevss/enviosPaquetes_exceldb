@@ -21,3 +21,10 @@ CREATE TABLE usuarios (
     clave varchar(155) not null
 );
 ```
+### inserta un usuario
+- Usuarios: root
+- Password: 12345
+
+``` sql
+insert into usuarios set nombre='Daniel de la rosa', usuario='root', clave='$2y$10$AEp7FHFWF0F050Jkh.7dz.UJS/73MDFDdI3e4T6AqNHVOLk8ptGFu';
+```
