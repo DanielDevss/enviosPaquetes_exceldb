@@ -64,6 +64,7 @@ function uploadDataMysql (){
     }
     
     foreach($dataSobres as $sobre){
+        
         $stmt = $conn->prepare("INSERT INTO envios (categoria,paqueteria,costo,etr_estimada,servicio) VALUES (:categoria,:paqueteria,:costo,:etr_estimada,:servicio)");
     
         $categoria = "sobre";

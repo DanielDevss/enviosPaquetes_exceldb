@@ -1,0 +1,456 @@
+@import url(../fonts/fonts.css);
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap');
+
+:root{
+    --color-primary: #006DB9;
+    --color-secondary: #00D161;
+    --color-warning: #ECE300;
+    --color-negro: #464646;
+    --alto: calc(100vh - 71px);
+}
+
+*, * * {
+    font-family: "Montserrat", sans-serif;
+}
+.f-fashion{
+    font-family: "Fashion outline";
+}
+.navbar{
+    /* position: sticky; */
+    top: 0;
+    z-index: 20;
+}
+
+.navbar-brand img{
+    height: 45px;
+}
+.divisor{
+    border-top: solid .5px white;
+    width: 45%; 
+    margin: auto; 
+}
+.divisor-check{
+    border-left: solid .5px white;
+    height: 50px;
+    display: block;
+}
+/* LINK BOTONES */
+
+.btn-primary{
+    background: rgb(0,45,81);
+    background: linear-gradient(90deg, rgba(0,45,81,1) 0%, rgba(0,120,187,1) 100%);
+    transition: all .3s ease-in;
+    -webkit-transition: all .3s ease-in;
+    -moz-transition: all .3s ease-in;
+    -ms-transition: all .3s ease-in;
+    -o-transition: all .3s ease-in;
+}
+.btn-primary:hover{
+    background: rgb(0,45,81);
+    background: linear-gradient(90deg, rgba(0,45,81,1) 100%, rgba(0,120,187,1) 100%);
+}
+.btn-secondary{
+    background: rgb(0,93,0);
+    background: linear-gradient(90deg, rgba(0,93,0,1) 0%, rgba(0,184,45,1) 100%);
+    transition: all .3s ease-in;
+    -webkit-transition: all .3s ease-in;
+    -moz-transition: all .3s ease-in;
+    -ms-transition: all .3s ease-in;
+    -o-transition: all .3s ease-in;
+}
+.btn-secondary:hover{
+    background: rgb(0,93,0);
+    background: linear-gradient(90deg, rgba(0,93,0,1) 100%, rgba(0,184,45,1) 100%);
+}
+
+.btn-warning{
+    background-color: var(--color-warning) !important;
+}
+
+/* LINK BANNER */
+.banner-fondo{
+    height: var(--alto);
+    object-fit: cover;
+    object-position: right;
+}
+
+/* LINK CARD COTIZAR */
+.card-cotizar{
+    color: white;
+    background-color: var(--color-primary) !important;
+    box-shadow: 0 12px 20px black !important;
+}
+.card-cotizar .card-title{
+    font-weight: bold;
+    font-size: 1.4rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+.card-cotizar .card-body{
+    border: solid 1px white;
+    border-radius: .5rem;
+    -webkit-border-radius: .5rem;
+    -moz-border-radius: .5rem;
+    -ms-border-radius: .5rem;
+    -o-border-radius: .5rem;
+}
+
+/* LINK BANNER */
+.bannercontenido{
+    width: 60%;
+    left: 40%;
+}
+.bannercontenido__lugar{
+    width: min(400px, 90%);
+    font-size: 1.5rem;
+    text-shadow: 0px 5px 5px black !important;
+}
+
+/* LINK ENLAZA */
+.enlaza{
+    color:var(--color-negro);
+}
+
+.enlaza__titulo{
+    font-size: 4rem;
+}
+@media (max-width: 1600px) {
+    .enlaza__titulo{
+        font-size: 3rem;
+    }    
+}
+.enlaza__imagen{
+    display: block;
+    width: 75%;
+    margin-left: auto;
+}
+
+/* LINK ANTENCION AL CLIENTE */
+.atencion__contenedor{
+    position: absolute;
+}
+@media (max-width: 768px) {
+    .atencion__contenedor{
+        position: relative;
+    }
+}
+.atencion__article{
+    margin-top: 20%;
+    width: 60%;
+    background-color: white;
+}
+@media (max-width:1200px) {
+    .atencion__article{
+        margin-top: 10%;
+    }
+}
+@media (max-width:992px) {
+    .atencion__article{
+        width: 86%;
+        margin: 10% auto;
+    }
+}
+@media (max-width:660px) {
+    .atencion__article{
+        width: 90%;
+        margin: auto;
+        margin-top: -50%;
+        box-shadow: 0 0 20px 0px #0001;
+    }
+}
+.atencion__titulo{
+    color: var(--color-negro);
+    text-align: center;
+    font-weight: bold;
+}
+.atencion__titulo span{
+    display: flex;
+    font-weight: normal;
+    line-height: 1;
+    padding: .5rem;
+    margin-bottom: 0;
+    color: white;
+    background-color: var(--color-primary);
+}
+.atencion__lista{
+    width: 75%;
+    margin: auto;
+    text-align: justify;
+    color: var(--color-negro);
+}
+@media (max-width:1440px) {
+    .atencion__lista{
+        width: 80%;
+    }
+}
+@media (max-width:660px) {
+    .atencion__lista{
+        width: 90%;
+        padding-left: 0;
+    }
+}
+.atencion__repartidor{
+    width: 33%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+@media (max-width:992px) {
+    .atencion__repartidor{
+        display: none;
+    }
+
+}
+
+/* LINK TARIFAS */
+
+.tarifas{
+    background-image: url("../img/tarifa/fondo.png");
+}
+.tarifas .container{
+    padding: 4rem;
+}
+.tarifas__article{
+    width: 60%;
+}
+@media (max-width:768px) {
+    .tarifas__article{
+        width: 100%;
+    }
+}
+.tarifas__titulo{
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--color-secondary);
+    margin-bottom: 2rem;
+}
+
+@media (max-width: 1368px) {
+    .tarifas__titulo{
+        font-size: 2rem;
+    }
+}
+
+.tarifas__titulo span{
+    font-weight: normal;
+    color: white;
+}
+.tarifas__lista{
+    text-align: justify;
+    padding-left: 0;
+    width: 80%;
+}
+@media (max-width: 768px) {
+    .tarifas__lista{
+        width: 100%;
+    }
+}
+.tarifas__lista li{
+    margin-bottom: 1rem;
+    position: relative;
+}
+.tarifas__lista li:after{
+    position: absolute;
+    left: -15px;
+    top: 5px;
+    content: "";
+    display: block;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: white;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.tarifas__plataforma{
+    width: 80%;
+}
+@media (max-width:768px) {
+    .tarifas__plataforma{
+        width: 100%;
+    }
+}
+
+.tarifas__badge{
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+}
+@media (max-width:1368px) {
+    .tarifas__badge{
+        font-size: 1rem !important;
+    }
+}
+
+
+.tarifas__mujer{
+    width: 34%;
+    z-index: 1;
+}
+@media (max-width: 992px) {
+    .tarifas__mujer{
+        width:45%;
+    }
+}
+@media (max-width: 768px) {
+    .tarifas__mujer{
+        display: none;
+    }
+}
+
+@media (min-width:1600px) {
+    .tarifas__mujer{
+        width: 30%;
+    }
+}
+
+
+/* LINK MARCAS */
+.marcas{
+    padding: 4rem 0;
+    height: 100vh;
+    background-image: url("../img/marcas/fondo.png");
+    background-position: bottom;
+}
+.marcas__titulo{
+    width: min(400px, 90%);
+    color: var(--color-negro);
+}
+@media (max-width:560px) {
+    .marcas__titulo{
+        font-size: 1.4rem;
+    }
+}
+.marcas__titulo span{
+    font-size: 3rem;
+    display: block;
+    font-weight: normal;
+}
+@media (max-width:560px) {
+    .marcas__titulo span{
+        font-size: 2rem;
+    }
+}
+
+.marcas__marca{
+    height: 50px;
+    margin: 0 .5rem;
+}
+
+
+/* LINK BENEFICIOS  */
+.beneficios__titulo{
+    color: var(--color-primary);
+    font-size: 46px;
+}
+.beneficios__titulo span:nth-child(1){
+    font-size: 40px;
+    color: var(--color-negro);
+}
+.beneficios__titulo span:nth-child(2){
+    font-size: 21px;
+}
+.beneficios__lista{
+    margin-top: 3rem;
+    color: var(--color-negro);
+    width: 280px;
+    list-style: none;
+}
+@media (max-width:560px) {
+    .beneficios__lista{
+        margin-top: 1rem;
+    }
+}
+.beneficios__lista li{
+    position: relative;
+}
+.beneficios__lista li:after{
+    height: 10px;
+    width:10px;
+    content: "";
+    position: absolute;
+    top: .5rem;
+    left: -1rem;
+    display: block;
+    background-color: var(--color-primary);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+/* LINK CARACTERISTICAS */
+.caracteristicas{
+    margin-top: -4rem;
+}
+
+.caracteristicas__item{
+    display: flex;
+    align-items: center;
+}
+@media (max-width: 768px) {
+    .caracteristicas__item{
+        flex-direction: column;
+    }
+}
+
+@media (max-width:668px) {
+    .caracteristicas{
+        margin-top: 1rem;
+    }
+}
+.caracteristicas__images{
+    width: 50%;
+}
+.caracteristicas__imagemini{
+    bottom: -25px;
+    right: -50px;
+    width: 40%;
+}
+.caracteristicas__imagemini--reverse{
+    bottom: -25px;
+    left: -50px;
+    width: 40%;
+}
+.caracteristicas__info{
+    width: 40%;
+    padding: 2rem;
+    color: var(--color-negro);
+}
+@media (max-width:1200px) {
+    .caracteristicas__info{
+        width: 50%;
+    }
+}
+@media (max-width:768px) {
+    .caracteristicas__info{
+        width: 90%;
+    }
+}
+
+.caracteristicas__titulo{
+    color: var(--color-primary);
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-left: 1rem;
+}
+.caracteristicas__titulo::after{
+    position: absolute;
+    height: 13px;
+    width: 13px;
+    content: "";
+    margin-left: -1rem;
+    background-color: var(--color-primary);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
