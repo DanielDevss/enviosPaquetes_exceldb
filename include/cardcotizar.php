@@ -1,4 +1,4 @@
-<article class="card card-cotizar p-3 mt-lg-5 shadow">
+<article class="card card-cotizar p-3 shadow border-0" id="card_cotizar">
         <div class="card-body text-white">
 
             <h3 class="card-title pt-3">Cotización instantanea</h3>
@@ -6,13 +6,14 @@
             <div class="divisor"></div>
 
             <div class="contenedorchecks">
+
                 <label style="font-size:.9rem" class="form-label w-100 p-3 m-0 text-center">Elige el tipo de envío que deseas realizar.</label>
                 
                 <div class="d-flex align-items-center justify-content-center text-uppercase fw-bold">
 
-                    <div class="">
+                    <div>
                         <div class="form-check mx-3">
-                            <input name="checkEnvio" type="radio" class="form-check-input" id="check_sobre">
+                            <input checked name="checkEnvio" type="radio" class="form-check-input" id="check_sobre">
                             <label for="check_sobre" class="">Sobre</label>
                         </div>
                     </div>
@@ -27,13 +28,13 @@
                     </div>
 
                 </div>
+                <span id="legenda_peso" class="fw-bold d-block text-center w-100" style="font-size: .8rem;">El peso no aplica en esta modalidad</span>
             </div>
 
-            <div class="mb-3">
-                <label for="inpPeso" class="my-2 fw-bold">¿Cuánto pesa?</label>
-                <select name="peso" id="inpPeso" class="form-select">
-                    <option disabled selected>Seleccionar un peso</option>
-                    <option value="0Kg - 5Kg">0Kg - 5Kg</option>
+            <div id="div_select_peso" class="mb-3">
+                <label for="select_peso" class="my-2 fw-bold">¿Cuánto pesa?</label>
+                <select disabled name="peso" id="select_peso" class="form-select">
+                    <option selected value="0Kg - 5Kg">0Kg - 5Kg</option>
                     <option value="5Kg - 10Kg">5Kg - 10Kg</option>
                     <option value="10Kg - 15Kg">10Kg - 15Kg</option>
                     <option value="15Kg - 20Kg">15Kg - 20Kg</option>
@@ -48,9 +49,9 @@
                 </select>
             </div>
 
-            <button class="btn btn-sm btn-warning text-uppercase shadow-sm d-block mx-auto fw-bold">¡Cotizar ya!</button>
+            <button id="btn_cotizar" class="btn btn-sm btn-warning text-uppercase shadow-sm d-block mx-auto fw-bold">¡Cotizar ya!</button>
         
-            <p class="p-3 mt-5 rounded-3 mb-0" style="border:solid 1px #fff; font-size:.7rem;">Los costos de está cotización son precios estimados basados en los datos que hayas proporcionado. Si eres emprendedor o tienes un negocio, disfruta de nuestras tarifas preferenciales.</p>
+            <p class="p-3 mt-5 rounded-3 cardcotizar__texto mb-0">Los costos de está cotización son precios estimados basados en los datos que hayas proporcionado. Si eres emprendedor o tienes un negocio, disfruta de nuestras tarifas preferenciales.</p>
 
         </div>
     </article>
