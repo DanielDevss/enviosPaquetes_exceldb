@@ -7,17 +7,26 @@
 
     <?php include_once('include/navbar.php') ?>
 
+
+    <section class="position-lg-fixed z-3 top-0 start-0 end-0 w-100" style="pointer-events: none;">
+
+        <div class="container min-100vh">
+            <div class="row h-100">
+
+                <div class="h-100 col-lg-4 d-lg-flex align-items-center">
+                    <?php include_once('include/cardcotizar.php') ?>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
     <section class="container">
 
         <div class="row h-100">
 
-            <section class="col-lg-4 d-flex align-items-center min-100vh">
-
-                <?php include_once("include/cardcotizar.php") ?>
-
-            </section>
-
-            <main class="col-lg-8 py-5" id="registrosenvios">
+            <main class="ms-auto col-lg-8 py-5" id="registrosenvios">
 
                 <header class="d-flex flex-column flex-lg-row justify-content-between">
                     <h1 class="h5 text-uppercase fw-bold header__titulo">
@@ -121,21 +130,19 @@
 
 
     <script src="assets/js/index.js"></script>
-    
-    <script>
 
+    <script>
         let vecesPulsadoCotizar = 0;
         let modalAlerta = new bootstrap.Modal(document.querySelector("#modalAlert"));
 
         btn_cotizar.addEventListener("click", () => {
-            vecesPulsadoCotizar ++;
-            if(vecesPulsadoCotizar == 3){
+            vecesPulsadoCotizar++;
+            if (vecesPulsadoCotizar == 3) {
                 setTimeout(() => {
                     modalAlerta.show()
                 }, 2000);
             }
         })
-
     </script>
 
 </body>

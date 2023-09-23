@@ -87,7 +87,7 @@ include_once('../utils/get.envios.php');
                             <thead class="bg-light">
                                 <tr>
                                     <!-- <th>ID</th> -->
-                                    <th class="fw-bold">Paquetería</th>
+                                    <th class="fw-bold">Mensajería</th>
                                     <th class="fw-bold">Costo</th>
                                     <th class="fw-bold">Entrega Estimada</th>
                                     <th class="fw-bold">Servicio</th>

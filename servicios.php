@@ -35,7 +35,7 @@
                             <a class="text-white" target="_blank" href="www.instagram.com">
                                 <i class="fab fa-instagram"></i>
                             </a>
-                            <a class="text-white" target="_blank" href="https://api.whatsapp.com/send?phone=0000000000">
+                            <a class="text-white" target="_blank" href="https://api.whatsapp.com/send?phone=8112094845">
                                 <i class="fab fa-whatsapp"></i>
                             </a>
                         </div>
@@ -89,7 +89,6 @@
                             <img height="50" class="m-2" src="assets/img/marcas/dhl.png" alt="">
                             <img height="50" class="m-2" src="assets/img/marcas/redpack.png" alt="">
                             <img height="50" class="m-2" src="assets/img/marcas/estafeta.png" alt="">
-                            <img height="50" class="m-2" src="assets/img/marcas/ups.png" alt="">
                             <img height="50" class="m-2" src="assets/img/servicios/sendex.png" alt="">
                         </div>
 
@@ -200,41 +199,77 @@
 
                     <section class="preguntas">
 
-                        <h2 class="fw-bold text-uppercase h1 preguntas__titulo">Preguntas <span class="blue">frecuentes</span></h2>
+                    <h2 class="fw-bold text-uppercase h1 preguntas__titulo">Preguntas <span class="blue">frecuentes</span></h2>
 
-                        <ul class="list-group list-group-flush border-0 bg-secondary-subtle rounded-3 px-4 py-5">
-                            <li class="list-group-item list-group-item-secondary list-group-item-action">
-                                <a href="" class="preguntas__item d-flex align-items-center 
-                                justify-content-between fw-bold">
-                                    ¿Cuáles son los artículos prohibidos?
-                                    <i class="fa-solid fa-angle-right"></i>
-                                </a>
-                            </li>
-                            <li class="list-group-item list-group-item-secondary list-group-item-action">
-                                <a href="" class="preguntas__item d-flex align-items-center justify-content-between fw-bold">
-                                    ¿Qué debo hacer cuando mi envío no cambia de estutus?
-                                    <i class="fa-solid fa-angle-right"></i>
-                                </a>
-                            </li>
-                            <li class="list-group-item list-group-item-secondary list-group-item-action">
-                                <a href="" class="preguntas__item d-flex align-items-center justify-content-between fw-bold">
-                                    ¿Qué debo hacer cuando la entrega máxima ya pasó?
-                                    <i class="fa-solid fa-angle-right"></i>
-                                </a>
-                            </li>
-                            <li class="list-group-item list-group-item-secondary list-group-item-action">
-                                <a href="" class="preguntas__item d-flex align-items-center justify-content-between fw-bold">
-                                    ¿Cómo puedo cotizar un envío?
-                                    <i class="fa-solid fa-angle-right"></i>
-                                </a>
-                            </li>
-                            <li class="list-group-item list-group-item-secondary list-group-item-action">
-                                <a href="" class="preguntas__item d-flex align-items-center justify-content-between fw-bold">
-                                    ¿Qúe debo hacer antes de enviar un paquete?
-                                    <i class="fa-solid fa-angle-right"></i>
-                                </a>
-                            </li>
-                        </ul>
+                        <div class="accordion accordion-flush bg-secondary-subtle rounded-3 px-4 py-5" id="accordionExample">
+                            <div class="accordion-item bg-secondary-subtle">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button bg-secondary-subtle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                        <span class="fw-bold">¿Cuáles son los artículos prohibidos?</span>
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        Artesanías o artículos de valor extraordinario, Animales, Material pornográfico, Plantas, Juegos de azar, Armas de fuego y de cualquier tipo de armas blancas, Restos humanos, Artículos perecederos y de fácil descomposición, Bebidas alcohólicas, Mercancía falsificada, Medicamentos controlados, Metales, Refacciones con residuos, Líquidos, Vidrio en cualquier presentación, Pieles y cueros de animales, Piedras preciosas, Dinero o monedas.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item bg-secondary-subtle">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button bg-secondary-subtle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        <span class="fw-bold">¿Qué debo hacer cuando mi envío no cambia de status?</span>
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        Es recomendable esperar a la fecha de entrega máxima en tu envío. En este caso no es necesario que te pongas en contacto con nosotros.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item bg-secondary-subtle">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button bg-secondary-subtle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        <span class="fw-bold">¿Qué debo hacer cuando la entrega máxima ya pasó?</span>
+                                    </button>
+                                </h2>
+                                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        Es necesario levantar solamente un reporte por cualquiera de los siguientes medios de contacto ya sea línea telefónica o en la sección de contacto de Esyshipment.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item bg-secondary-subtle">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button bg-secondary-subtle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                        <span class="fw-bold">¿Cómo puedo cotizar un envío?</span>
+                                    </button>
+                                </h2>
+                                <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        La cotización de tu envío depende de muchas variables, como el peso, las dimensiones, el tiempo de entrega y el destino.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item bg-secondary-subtle">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button bg-secondary-subtle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                        <span class="fw-bold">¿Qué debo saber antes de enviar un paquete?</span>
+                                    </button>
+                                </h2>
+                                <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+
+                                        <ol>
+                                            <li>Identifica que tu producto no se encuentre en nuestra lista de artículos prohibidos.</li>
+                                            <li>Verifica cobertura.</li>
+                                            <li>Revisa que el embalaje sea el correcto.</li>
+                                            <li>¡Cotiza y realiza tu envío!</li>
+                                        </ol>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
                     </section>
 

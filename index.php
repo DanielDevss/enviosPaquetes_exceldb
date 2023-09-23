@@ -42,7 +42,7 @@
                         <a class="text-white" target="_blank" href="www.instagram.com">
                             <i class="fab fa-instagram"></i>
                         </a>
-                        <a class="text-white" target="_blank" href="https://api.whatsapp.com/send?phone=0000000000">
+                        <a class="text-white" target="_blank" href="https://api.whatsapp.com/send?phone=8112094845">
                             <i class="fab fa-whatsapp"></i>
                         </a>
                     </div>
@@ -191,10 +191,11 @@
                     <p class="fw-bold text-uppercase mt-3">Regístrate para tener <span class="text-bg-success">los mejores precios desde tu primer envío</span></p>
 
                     <div class="marcas__marcas mt-5 pt-4">
-                        <img data-aos="flip-down" data-aos-delay-="600" class="marcas__marca" src="assets/img/marcas/fedex.png" alt="">
-                        <img data-aos="flip-left" data-aos-delay-="600" class="marcas__marca" src="assets/img/marcas/dhl.png" alt="">
-                        <img data-aos="flip-up" data-aos-delay-="600" class="marcas__marca" src="assets/img/marcas/ups.png" alt="">
-                        <img data-aos="flip-right" data-aos-delay-="600" class="marcas__marca" src="assets/img/marcas/estafeta.png" alt="">
+                        <img data-aos="flip-down" data-aos-delay-="600" class="marcas__marca m-2" src="assets/img/marcas/fedex.png" alt="">
+                        <img data-aos="flip-left" data-aos-delay-="600" class="marcas__marc m-2" src="assets/img/marcas/dhl.png" alt="">
+                        <img data-aos="flip-up" data-aos-delay-="600" class="marcas__marca m-2" src="assets/img/marcas/redpack.png" alt="">
+                        <img data-aos="flip-right" data-aos-delay-="600" class="marcas__marca m-2" src="assets/img/marcas/estafeta.png" alt="">
+                        <img data-aos="flip-right" data-aos-delay-="600" class="marcas__marca m-2" src="assets/img/marcas/sendex.png" alt="">
                     </div>
 
                 </article>

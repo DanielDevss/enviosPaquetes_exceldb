@@ -34,7 +34,7 @@
                             <a class="text-white" target="_blank" href="www.instagram.com">
                                 <i class="fab fa-instagram"></i>
                             </a>
-                            <a class="text-white" target="_blank" href="https://api.whatsapp.com/send?phone=0000000000">
+                            <a class="text-white" target="_blank" href="https://api.whatsapp.com/send?phone=8112094845">
                                 <i class="fab fa-whatsapp"></i>
                             </a>
                         </div>
