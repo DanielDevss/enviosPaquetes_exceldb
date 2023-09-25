@@ -132,7 +132,11 @@
                     </li>
                 </ul>
 
+                <section class="mapa mt-4 rounded-4">
+                    <iframe class="w-100 m-auto rounded-3 shadow border-light" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3760.0353515528127!2d-99.21846112488754!3d19.540095781762407!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d21d78379c8fa7%3A0xa9265c1a0358ab67!2sSach%20Sentura!5e0!3m2!1ses!2smx!4v1695498836885!5m2!1ses!2smx" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </section>
             </main>
+
 
         </section>
 
