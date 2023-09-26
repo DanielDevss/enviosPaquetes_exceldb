@@ -21,7 +21,7 @@ include_once('../utils/get.envios.php');
             <h2 class="h4">Actualizar registros</h2>
             <div class="d-flex gap-1">
                 <button class="btn btn-outline-secondary" data-bs-target="#modalPaqueterias" data-bs-toggle="modal">
-                    <span class="d-none d-md-inline align-items-center">Nueva Paquetería</span>
+                    <span class="d-none d-md-inline align-items-center">Paqueterías</span>
                     <span class="material-symbols-rounded">add_business</span>
                 </button>
                 <button class="btn btn-outline-secondary" data-bs-target="#modalHelp" data-bs-toggle="modal">
