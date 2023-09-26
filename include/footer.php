@@ -35,14 +35,14 @@
                 </form>
 
                 <section class="mb-3">
-                    <a href="assets/docs/Politicas de privacidad.pdf" download class="link-light link-offset-2 link-underline-opacity-0 link-underline d-block">Políticas de Privacidad</a>
-                    <a href="assets/docs/Terminos y condiciones.pdf" download class="link-light link-offset-2 link-underline-opacity-0 link-underline d-block">Terminos y Condiciones</a>
+                    
+                    
                 </section>
 
             </div>
         </section>
     </section>
 </footer>
-<span class="footer__copy">Copyright &COPY; 2023 ESYSHIPMENT SERVICES S.A DE C.V.</span>
+<span class="footer__copy">Copyright &COPY; 2023 ESYSHIPMENT SERVICES S.A DE C.V. | <a href="assets/docs/Politicas de privacidad.pdf" download class="link-light link-offset-2 link-underline-opacity-0 link-underline">Políticas de Privacidad</a> | <a href="assets/docs/Terminos y condiciones.pdf" download class="link-light link-offset-2 link-underline-opacity-0 link-underline">Terminos y Condiciones</a></span>
 
 <script src="assets/js/contacto.js"></script>

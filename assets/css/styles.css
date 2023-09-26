@@ -9,8 +9,32 @@
     --alto: calc(100vh - 71px);
 }
 
+body{
+    width: 100%;
+    overflow-x: hidden;
+}
 *, * * {
     font-family: "Montserrat", sans-serif;
+}
+.float-whatsapp{
+    z-index: 100;
+    transition: all .3s ease;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+}
+.float-whatsapp:hover{
+    transform: scale(1.2);
+    
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+}
+.float-whatsapp img{
+    width: 60px;
+    display: block;
 }
 .f-fashion{
     font-family: "Fashion outline";
@@ -869,7 +893,7 @@
         margin-left: .5rem;
     }
 }
-
+/* !SECTION */
 
 /* LINK NOSOTROS */
 @media (min-width:768px){
@@ -952,6 +976,57 @@
     color: var(--color-negro);
     text-decoration: none;
     font-size: 1.5rem;
+}
+
+/* Aqui empiezan las direcciones */
+.sucursales{
+    padding: 1rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+.sucursales__card{
+    width: 48%;
+    text-decoration: none;
+    position: relative;
+    display: flex;
+    padding-left: 30px;
+    align-items: center;
+    margin: 6px;
+}
+@media (max-width:768px){
+    .sucursales__card{
+        width: 100%;
+        margin: 10px auto;
+    }
+}
+.sucursales__icono{
+    left: 0;
+    z-index: 1;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    color: white;
+    font-size: 30px;
+    background-color: var(--color-primary);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+.sucursales__info{
+    padding: 1rem;
+    width: 100%;
+    padding-left: calc(30px + 1rem);
+}
+.sucursales__info .text-muted{
+    font-size: .8rem;
 }
 
 /* LINK SERVICIOS */

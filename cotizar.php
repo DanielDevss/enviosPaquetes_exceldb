@@ -22,6 +22,8 @@
 
     </section>
 
+    <?php include("include/floatWhatsapp.php")?>
+
     <section class="container">
 
         <div class="row h-100">

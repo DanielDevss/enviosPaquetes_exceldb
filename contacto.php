@@ -46,6 +46,7 @@
 
     </header>
 
+    <?php include("include/floatWhatsapp.php") ?>
     <!-- LINK CARD-COTIZAR -->
 
     <a href="cotizar.php" class="d-block d-lg-none buttonCotizarResponse text-uppercase btn">¡Cotizar ya!</a>
@@ -76,6 +77,59 @@
                 <h1 class="f-fashion display-3 text-uppercase">Contáctanos</h1>
 
                 <img class="w-75-custom d-block m-auto mb-5" src="assets/img/contacto/foto_.png" alt="Contacta a esyshipment">
+
+                <section class="mapa mt-4 rounded-4">
+                    <iframe class="w-100 m-auto rounded-3 shadow border-light" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3760.0353515528127!2d-99.21846112488754!3d19.540095781762407!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d21d78379c8fa7%3A0xa9265c1a0358ab67!2sSach%20Sentura!5e0!3m2!1ses!2smx!4v1695498836885!5m2!1ses!2smx" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </section>
+
+                <article class="sucursales">
+
+                    <a href="" class="sucursales__card">
+                        <div class="sucursales__icono">
+                            <i class="fas fa-location-dot"></i>
+                        </div>
+                        <section class="card sucursales__info">
+                            <h3 class="card-title h5 mb-0">En Ensenada</h3>
+                            <p class="fw-bold mb-0">Sucursal Murua</p>
+                            <p class="mb-0 text-muted">Plaza Sentura, Blvd. Manuel Ávila Camacho 2610, <br> Torre B, Piso 10, Valle de los Pinos, <br> C.P. 54040, Tlanepantla, Edo. Méx.</p>
+                        </section>
+                    </a>
+                    
+                    <a href="" class="sucursales__card">
+                        <div class="sucursales__icono">
+                            <i class="fas fa-location-dot"></i>
+                        </div>
+                        <section class="card sucursales__info">
+                            <h3 class="card-title h5 mb-0">En Ensenada</h3>
+                            <p class="fw-bold mb-0">Sucursal Insurgentes.</p>
+                            <p class="mb-0 text-muted">Plaza Sentura, Blvd. Manuel Ávila Camacho 2610, <br> Torre B, Piso 10, Valle de los Pinos, <br> C.P. 54040, Tlanepantla, Edo. Méx.</p>
+                        </section>
+                    </a>
+
+                    <a href="" class="sucursales__card">
+                        <div class="sucursales__icono">
+                            <i class="fas fa-location-dot"></i>
+                        </div>
+                        <section class="card sucursales__info">
+                            <h3 class="card-title h5 mb-0">En Ensenada</h3>
+                            <p class="fw-bold mb-0">Sucursal en Playas de Tijuana.</p>
+                            <p class="mb-0 text-muted">Plaza Sentura, Blvd. Manuel Ávila Camacho 2610, <br> Torre B, Piso 10, Valle de los Pinos, <br> C.P. 54040, Tlanepantla, Edo. Méx.</p>
+                        </section>
+                    </a>
+
+                    <a href="" class="sucursales__card">
+                        <div class="sucursales__icono">
+                            <i class="fas fa-location-dot"></i>
+                        </div>
+                        <section class="card sucursales__info">
+                            <h3 class="card-title h5 mb-0">En Ensenada</h3>
+                            <p class="fw-bold mb-0">Sucursal Valle Dorado.</p>
+                            <p class="mb-0 text-muted">Plaza Sentura, Blvd. Manuel Ávila Camacho 2610, <br> Torre B, Piso 10, Valle de los Pinos, <br> C.P. 54040, Tlanepantla, Edo. Méx.</p>
+                        </section>
+                    </a>
+
+
+                </article>
 
                 <div class="py-5">
 
@@ -108,12 +162,12 @@
                         </fieldset>
                     </form>
                 </div>
-                
+
                 <section class="row w-75-custom m-auto llamanos">
                     <h2 class="col-md-6 fw-bold h5 llamanos__titulo">¡Llámanos! <br> Estamos para servirte</h2>
                     <div class="col-md-6 d-flex align-items-center">
                         <img width="50" src="assets/img/contacto/whatsapp.png" alt="Contactanos por whatsapp">
-                        <a target="_blank" class="h5 fw-bold ms-2 llamanos__numero">(33) 3745 8508</a>
+                        <a href="https://api.whatsapp.com/send?phone=3337458508" target="_blank" class="h5 fw-bold ms-2 llamanos__numero">(33) 3745 8508</a>
                     </div>
                 </section>
 
@@ -132,9 +186,7 @@
                     </li>
                 </ul>
 
-                <section class="mapa mt-4 rounded-4">
-                    <iframe class="w-100 m-auto rounded-3 shadow border-light" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3760.0353515528127!2d-99.21846112488754!3d19.540095781762407!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d21d78379c8fa7%3A0xa9265c1a0358ab67!2sSach%20Sentura!5e0!3m2!1ses!2smx!4v1695498836885!5m2!1ses!2smx" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </section>
+
             </main>
 
 

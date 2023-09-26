@@ -7,3 +7,7 @@
 .material-symbols-rounded{
     margin-left: 5px;
 }
+
+#preloaderExcel {
+    z-index: 10000;
+}

@@ -1,6 +1,6 @@
 <?php
 session_start();
-if(empty($_SESSION['usuario'])){
+if (empty($_SESSION['usuario'])) {
     header('location: login.php');
 }
 
@@ -19,10 +19,16 @@ include_once('../utils/get.envios.php');
     <header class="container card bg-white my-3 p-3 p-md-4">
         <div class="d-flex justify-content-between align-items-center">
             <h2 class="h4">Actualizar registros</h2>
-            <button class="btn btn-outline-secondary" data-bs-target="#modalHelp" data-bs-toggle="modal">
-                Información
-                <span class="material-symbols-rounded">help</span>
-            </button>
+            <div class="d-flex gap-1">
+                <button class="btn btn-outline-secondary" data-bs-target="#modalPaqueterias" data-bs-toggle="modal">
+                    <span class="d-none d-md-inline align-items-center">Nueva Paquetería</span>
+                    <span class="material-symbols-rounded">add_business</span>
+                </button>
+                <button class="btn btn-outline-secondary" data-bs-target="#modalHelp" data-bs-toggle="modal">
+                    <span class="d-none d-md-inline align-items-center">Información</span>
+                    <span class="material-symbols-rounded">help</span>
+                </button>
+            </div>
         </div>
 
         <form class="" id="formulario" method="post" action="../controllers/controllers.excel.php" enctype="multipart/form-data">
@@ -34,7 +40,7 @@ include_once('../utils/get.envios.php');
 
             <a class="btn btn-primary" href="../plantilla/templete.xlsx" download="plantilla.xlsx">
                 <span class="d-none d-md-inline align-items-center">Descargar Plantilla</span>
-                <span class="material-symbols-rounded">table</span>   
+                <span class="material-symbols-rounded">table</span>
             </a>
             <button id='btnBackupExcel' class="btn btn-secondary">
                 <span class="d-none d-md-inline align-items-center">Respaldar Datos</span>
@@ -43,7 +49,7 @@ include_once('../utils/get.envios.php');
             </button>
             <a class=" btn btn-secondary" href="../plantilla/templete_backup.xlsx" download="backup.xlsx">
                 <span class="d-none d-md-inline align-items-center">Descargar Ultimo Respaldo</span>
-                <span class="material-symbols-rounded">cloud_download</span>   
+                <span class="material-symbols-rounded">cloud_download</span>
             </a>
 
         </div>
@@ -57,55 +63,100 @@ include_once('../utils/get.envios.php');
         <div class="p-4">
 
             <ul class="nav nav-pills" id="nav_tabs" role="tablist">
-    
+
                 <li class="nav-item" role="presentation">
                     <button class="nav-link active" id="tab_sobre" data-bs-toggle="tab" data-bs-target="#panel_sobre" type="button" role="tab" aria-controls="panel_sobre" aria-selected="true">
-                    <i class="material-symbols-rounded">mail</i>
-                </button>
-            </li>
-            <li class="nav-item" role="presentation">
-                <button class="nav-link d-flex align-middle" id="tab_paquete" data-bs-toggle="tab" data-bs-target="#panel_paquete" type="button" role="tab" aria-controls="panel_paquete" aria-selected="false">
-                    <i class="material-symbols-rounded">box</i> 
-                </button>
+                        <i class="material-symbols-rounded">mail</i>
+                    </button>
                 </li>
-    
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link d-flex align-middle" id="tab_paquete" data-bs-toggle="tab" data-bs-target="#panel_paquete" type="button" role="tab" aria-controls="panel_paquete" aria-selected="false">
+                        <i class="material-symbols-rounded">box</i>
+                    </button>
+                </li>
+
             </ul>
 
-            
+
             <div class="tab-content" id="tabs_panel">
 
                 <!-- NOTE PANEL DE SOBRES -->
                 <div class="tab-pane fade show active" id="panel_sobre" role="tabpanel" aria-labelledby="tab_sobre" tabindex="0">
-                    
+
 
                     <div class="table-responsive" style="max-height: 45vh">
 
-                    <?php if(count($data_sobre)) { ?>
+                        <?php if (count($data_sobre)) { ?>
 
-                        <table class="table align-middle bg-white">
-    
-                            <thead class="bg-light">
-                                <tr>
-                                    <!-- <th>ID</th> -->
-                                    <th class="fw-bold">Mensajería</th>
-                                    <th class="fw-bold">Costo</th>
-                                    <th class="fw-bold">Entrega Estimada</th>
-                                    <th class="fw-bold">Servicio</th>
-                                </tr>
-                            </thead>
+                            <table class="table align-middle bg-white">
 
-                            <tbody>
-                                <?php foreach($data_sobre as $sobre) { ?>
-                                <tr>
-                                    <!-- <td><?= $sobre['id'] ?></td> -->
-                                    <td><?= $sobre['paqueteria'] ?></td>
-                                    <td><?= $sobre['costo'] ?></td>
-                                    <td><?= $sobre['etr_estimada'] ?></td>
-                                    <td><?= $sobre['servicio'] ?></td>
-                                </tr>
-                                <?php } ?>
-                            </tbody>
-    
+                                <thead class="bg-light">
+                                    <tr>
+                                        <!-- <th>ID</th> -->
+                                        <th class="fw-bold">Mensajería</th>
+                                        <th class="fw-bold">Costo</th>
+                                        <th class="fw-bold">Entrega Estimada</th>
+                                        <th class="fw-bold">Servicio</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <?php foreach ($data_sobre as $sobre) { ?>
+                                        <tr>
+                                            <!-- <td><?= $sobre['id'] ?></td> -->
+                                            <td><?= $sobre['paqueteria'] ?></td>
+                                            <td><?= $sobre['costo'] ?></td>
+                                            <td><?= $sobre['etr_estimada'] ?></td>
+                                            <td><?= $sobre['servicio'] ?></td>
+                                        </tr>
+                                    <?php } ?>
+                                </tbody>
+
+                            </table>
+
+                        <?php } else { ?>
+
+                            <p class="text-center p-4">No se encontraron resultados... <i class="bi bi-search"></i></p>
+
+                        <?php } ?>
+
+                    </div>
+
+                </div>
+
+                <!-- NOTE PANEL DE PAQUETES -->
+
+                <div class="tab-pane fade" id="panel_paquete" role="tabpanel" aria-labelledby="tab_paquete" tabindex="0">
+
+                    <div class="table-responsive" style="max-height: 45vh">
+
+                        <table class="table">
+
+                            <?php if (count($data_paqueteria)) { ?>
+
+                                <thead class="bg-light">
+                                    <tr>
+                                        <!-- <th>ID</th> -->
+                                        <th class="fw-bold">Paquetería</th>
+                                        <th class="fw-bold">Costo</th>
+                                        <th class="fw-bold">Entrega Estimada</th>
+                                        <th class="fw-bold">Servicio</th>
+                                        <th class="fw-bold">Peso en Kg</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <?php foreach ($data_paqueteria as $paqueteria) { ?>
+                                        <tr>
+                                            <!-- <td><?= $paqueteria['id'] ?></td> -->
+                                            <td><?= $paqueteria['paqueteria'] ?></td>
+                                            <td><?= $paqueteria['costo'] ?></td>
+                                            <td><?= $paqueteria['etr_estimada'] ?></td>
+                                            <td><?= $paqueteria['servicio'] ?></td>
+                                            <td><?= $paqueteria['peso'] ?></td>
+                                        </tr>
+                                    <?php } ?>
+                                </tbody>
                         </table>
 
                     <?php } else { ?>
@@ -113,52 +164,7 @@ include_once('../utils/get.envios.php');
                         <p class="text-center p-4">No se encontraron resultados... <i class="bi bi-search"></i></p>
 
                     <?php } ?>
-
                     </div>
-                
-                </div>
-                
-                <!-- NOTE PANEL DE PAQUETES -->
-
-                <div class="tab-pane fade" id="panel_paquete" role="tabpanel" aria-labelledby="tab_paquete" tabindex="0">
-
-                <div class="table-responsive" style="max-height: 45vh">
-                
-                    <table class="table">
-
-                    <?php if(count($data_paqueteria)) { ?>
-
-                        <thead class="bg-light">
-                            <tr>
-                                <!-- <th>ID</th> -->
-                                <th class="fw-bold">Paquetería</th>
-                                <th class="fw-bold">Costo</th>
-                                <th class="fw-bold">Entrega Estimada</th>
-                                <th class="fw-bold">Servicio</th>
-                                <th class="fw-bold">Peso en Kg</th>
-                            </tr>
-                        </thead>
-
-                        <tbody>
-                            <?php foreach($data_paqueteria as $paqueteria) { ?>
-                                <tr>
-                                    <!-- <td><?= $paqueteria['id'] ?></td> -->
-                                    <td><?= $paqueteria['paqueteria'] ?></td>
-                                    <td><?= $paqueteria['costo'] ?></td>
-                                    <td><?= $paqueteria['etr_estimada'] ?></td>
-                                    <td><?= $paqueteria['servicio'] ?></td>
-                                    <td><?= $paqueteria['peso'] ?></td>
-                                </tr>
-                            <?php } ?>
-                        </tbody>
-                    </table>
-
-                    <?php } else { ?>
-
-                        <p class="text-center p-4">No se encontraron resultados... <i class="bi bi-search"></i></p>
-
-                    <?php } ?>
-                </div>
 
                 </div>
 
@@ -186,7 +192,7 @@ include_once('../utils/get.envios.php');
                     </article>
 
                     <hr class="hr hr-blurry" />
-                    
+
                     <article>
                         <p class="note note-secondary"><span class="fw-bold">Nota:</span> Al momento de realizar un respaldo el respaldo anterior será remplazado por el reciente.</p>
                         <h3 class="fs-5 d-flex align-middle"><i class="material-symbols-rounded">settings_backup_restore</i> Respaldar Datos</h3>
@@ -196,11 +202,60 @@ include_once('../utils/get.envios.php');
                             <li>Si el botón se colorea de <span class="text-danger fw-bold">rojo</span>, es porque ocurrio un error al respaldar y se recomienda esperar unos momentos o reportar este problema con soporte FDK.</li>
                         </ul>
                     </article>
-                    
+
                 </div>
-                
+
                 <div class="modal-footer">
                     <button data-bs-dismiss="modal" class="btn btn-outline-secondary">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="modalPaqueterias" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>Paqueterias</h5>
+                    <button id="closeModalPaquteria" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+
+                    <form id="formPaqueteria" action="../controllers/controllers.paqueteria.php" method="POST" enctype="multipart/form-data">
+                        <div class="mb-3">
+                            <label for="inpNombre">Paquetería</label>
+                            <input type="text" name="nombre" id="inpNombre" class="form-control" placeholder="Nombre de la paquetería">
+                        </div>
+                        <div>
+                            <label for="inpNombre">Carga un Logotipo</label>
+                            <input type="file" name="image" id="inpLogotipo" class="form-control" accept=".png" placeholder="Nombre de la paquetería">
+                            <p class="text-muted mt-2">El logotipo debe ser formato <span class="fw-bold">PNG</span> y debe pesar menos de 500kb para tener un buen rendimiento.</p>
+                        </div>
+                    </form>
+
+                    <div class="accordion" id="accordionPaqueterias">
+
+                        <div class="accordion-item">
+
+                            <h2 class="accordion-header" id="headerPaqueterias">
+                                <button class="accordion-button collapsed fw-bold" type="button" data-mdb-toggle="collapse" data-mdb-target="#controlPaqueterias" aria-expanded="false" aria-controls="controlPaqueterias">
+                                    <span class="material-symbols-rounded me-2">warehouse</span>
+                                    Ver paqueterías
+                                </button>
+                            </h2>
+                            <div id="controlPaqueterias" class="accordion-collapse collapse" aria-labelledby="headerPaqueterias" data-mdb-parent="#accordionPaqueterias">
+                                <ul class="accordion-body list-group list-group-flush p-0" id="listaPaqueterias">
+                                    <!-- SE INSERTAN DESDE EL JS -->
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button id="btnSavePaqueteria" class="btn btn-primary">Guardar Paquetería</button>
                 </div>
             </div>
         </div>
@@ -213,7 +268,7 @@ include_once('../utils/get.envios.php');
         Actualizando ...
     </div>
 
-<script src="scripts/index.js"></script>
+    <script src="scripts/index.js"></script>
 
 </body>
 

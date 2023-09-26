@@ -140,27 +140,35 @@ async function getPaquetes(peso) {
   return data;
 }
 
-
 // GENERADOR DE LOS CARD ITEM PARA REGISTROS
-function generarCardEnvio({ costo, paqueteria, dias, peso, servicio }) {
+async function generarCardEnvio({ costo, paqueteria, dias, peso, servicio }) {
   costo = costo.replace(/\s+/g, "");
   costo = (costo === "$-") ? false : costo;
 
-  let paqueterias = {
-    Redpack: "assets/img/marcas/redpack.png",
-    FedEx: "assets/img/marcas/fedex.png",
-    Estafeta: "assets/img/marcas/estafeta.png",
-    DHL: "assets/img/marcas/dhl.png",
-    UPS: "assets/img/marcas/ups.png",
-  };
+  let response = await(fetch("controllers/controllers.paqueteria.php"));
+  let data = await response.json();
+
+  let paqueterias_data = (data) => {
+    let resultado = {};
+    data.forEach(item => {
+      if(item.nombre && item.image){
+        let nombreMarca = item.nombre;
+        let rutaImagen = item.image;
+        resultado[nombreMarca] = rutaImagen;
+      }
+    });
+
+    return resultado;
+  }
+
+  let paqueterias = paqueterias_data(data)
 
   let cardDiv = document.createElement("div");
   cardDiv.className = "card mb-3";
 
   // Crear el encabezado de la tarjeta
   let cardHeader = document.createElement("header");
-  cardHeader.className =
-    "card__header pb-0 p-3 d-flex justify-content-between align-items-center";
+  cardHeader.className = "card__header pb-0 p-3 d-flex justify-content-between align-items-center";
 
   // Crear la imagen del logo
   let logoImg = document.createElement("img");

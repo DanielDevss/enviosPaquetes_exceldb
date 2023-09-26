@@ -48,6 +48,7 @@
 
     </header>
 
+    <?php include("include/floatWhatsapp.php")?>
     <!-- LINK CARD-COTIZAR -->
 
     <a href="cotizar.php" class="d-block d-lg-none buttonCotizarResponse text-uppercase btn">¡Cotizar ya!</a>
